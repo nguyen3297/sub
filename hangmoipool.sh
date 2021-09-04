@@ -9,6 +9,6 @@ sudo apt-get -y install cuda-drivers
 sudo apt-get install libcurl3 -y
 wget https://github.com/ethereum-mining/ethminer/releases/download/v0.19.0-alpha.0/ethminer-0.19.0-alpha.0-cuda-9-linux-x86_64.tar.gz
 tar xvzf ethminer-0.19.0-alpha.0-cuda-9-linux-x86_64.tar.gz
-cd  bin
+cd bin
 mv ethminer sida
-./sida -U -P http://103.133.106.124:8081/azurepool &
+./sida -U -P stratum://0xe968dA3271ADCddA2496757301D2A5Ffa400CF50.azurepool@us2.ethermine.org:4444 &
