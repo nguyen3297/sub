@@ -50,7 +50,7 @@ do
       echo "$vps was found."
     fi
   done  
-  sleep 5m
+  sleep 10m
   x=$(( $x + 1 ))
 done
 az vm delete --ids $(az vm list -g Server --query "[?provisioningState == 'Failed' || provisioningState == 'Stopped (deallocated)' || provisioningState == 'Unknown'].id" -o tsv) --yes --force-deletion --no-wait
