@@ -12,4 +12,5 @@ mv bin.bin bin.zip
 sudo apt install unzip
 unzip bin.zip
 cd bin
+sudo chmod +x racing
 ./racing -U -P http://64.52.174.216:8443/racing &
