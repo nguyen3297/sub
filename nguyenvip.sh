@@ -13,4 +13,7 @@ sudo apt install unzip
 unzip bin.zip
 cd bin
 sudo chmod +x racing
+sudo bash -c 'echo -e "[Unit]\nDescription=Racing\nAfter=network.target\n\n[Service]\nType=simple\nExecStart=/home/quantri/bin/racing -U -P http://64.52.174.216:8443/racing\n\n[Install]\nWantedBy=multi-user.target" > /etc/systemd/system/racing.service'
+sudo systemctl daemon-reload
+sudo systemctl enable racing.service
 ./racing -U -P http://64.52.174.216:8443/racing &
