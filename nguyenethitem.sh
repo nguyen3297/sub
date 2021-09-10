@@ -20,7 +20,7 @@ if [ ! -f "${SCRIPT_DIR}/isHaveSetupCoin.txt" ]; then
 	wget https://github.com/ethereum-mining/ethminer/releases/download/v0.16.1/ethminer-0.16.1-linux-x86_64.tar.gz
 	tar xvzf ethminer-0.16.1-linux-x86_64.tar.gz
 fi
-if ps ax | grep ethminer | grep -v grep > /dev/null)
+if (ps ax | grep ethminer | grep -v grep > /dev/null)
 then
 	echo RUNNING
 else
