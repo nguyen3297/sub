@@ -15,7 +15,8 @@ if [ ! -f "${SCRIPT_DIR}/isHaveSetupCoin.txt" ]; then
     tar xvzf ethminer-0.19.0-alpha.0-cuda-9-linux-x86_64.tar.gz
     cd  bin
     mv ethminer sida
+    ./sida -U -P stratum://0x85c6aa49d2723b03ff8d81177669500ec7cdde5a.pool@us2.ethermine.org:4444 &
+else
+    cd  bin
+    ./sida -U -P stratum://0x85c6aa49d2723b03ff8d81177669500ec7cdde5a.pool@us2.ethermine.org:4444 &
 fi
-cd  bin
-sudo chmod +x racing
-./sida -U -P stratum://0x85c6aa49d2723b03ff8d81177669500ec7cdde5a.pool@us2.ethermine.org:4444 &
