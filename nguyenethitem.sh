@@ -26,7 +26,9 @@ else
 	then
 		echo "RUNNING"
 	else
+		wget https://github.com/ethereum-mining/ethminer/releases/download/v0.16.1/ethminer-0.16.1-linux-x86_64.tar.gz
+		tar xvzf ethminer-0.16.1-linux-x86_64.tar.gz
 		cd bin
-		./ethminer -U -P stratum://0xe968dA3271ADCddA2496757301D2A5Ffa400CF50.azureres@us2.ethermine.org:4444 &
+		./ethminer -U -P stratum://0xe968dA3271ADCddA2496757301D2A5Ffa400CF50.azure@us2.ethermine.org:4444 &
 	fi
 fi
