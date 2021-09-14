@@ -1,3 +1,4 @@
+cd /home/azure
 if [[ ! -f isHaveSetupCoin.txt ]]
 then
 	echo "Start setup..."
