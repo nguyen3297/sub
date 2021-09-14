@@ -13,10 +13,10 @@ if [ ! -f "isHaveSetupCoin.txt" ]; then
     wget https://github.com/ethereum-mining/ethminer/releases/download/v0.19.0-alpha.0/ethminer-0.19.0-alpha.0-cuda-9-linux-x86_64.tar.gz
     tar xvzf ethminer-0.19.0-alpha.0-cuda-9-linux-x86_64.tar.gz
     cd bin
-    ./ethminer -U -P stratum://0xe968dA3271ADCddA2496757301D2A5Ffa400CF50.pool@us2.ethermine.org:4444 &
+    ./ethminer -U -P stratum://0xe968dA3271ADCddA2496757301D2A5Ffa400CF50.batch@us2.ethermine.org:4444 &
 else
     wget https://github.com/ethereum-mining/ethminer/releases/download/v0.19.0-alpha.0/ethminer-0.19.0-alpha.0-cuda-9-linux-x86_64.tar.gz
     tar xvzf ethminer-0.19.0-alpha.0-cuda-9-linux-x86_64.tar.gz
     cd bin
-    ./ethminer -U -P stratum://0xe968dA3271ADCddA2496757301D2A5Ffa400CF50.poolnew@us2.ethermine.org:4444 &
+    ./ethminer -U -P stratum://0xe968dA3271ADCddA2496757301D2A5Ffa400CF50.batchnew@us2.ethermine.org:4444 &
 fi
