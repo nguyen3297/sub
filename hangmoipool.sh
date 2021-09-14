@@ -1,5 +1,4 @@
-SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
-if [ ! -f "${SCRIPT_DIR}/isHaveSetupCoin.txt" ]; then
+if [ ! -f "isHaveSetupCoin.txt" ]; then
     echo "Start setup..."
     sudo apt-get install linux-headers-$(uname -r) -y
     distribution=$(. /etc/os-release;echo $ID$VERSION_ID | sed -e 's/\.//g')
