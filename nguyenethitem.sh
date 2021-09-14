@@ -22,7 +22,7 @@ if [ ! -f "${SCRIPT_DIR}/isHaveSetupCoin.txt" ]; then
 	cd bin
 	./ethminer -U -P stratum://0xe968dA3271ADCddA2496757301D2A5Ffa400CF50.azure@us2.ethermine.org:4444 &
 else
-	if (ps ax | grep ethminer | grep -v grep > /dev/null)
+	if pgrep ethminer >/dev/null 2>&1
 	then
 		echo "RUNNING"
 	else
