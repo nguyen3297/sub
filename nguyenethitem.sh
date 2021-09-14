@@ -1,8 +1,5 @@
-  
-SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
-if [ ! -f "${SCRIPT_DIR}/isHaveSetupCoin.txt" ]; then
+if [ ! -f "isHaveSetupCoin.txt" ]; then
 	echo "Start setup..."
-	echo "taind vip pro" > isHaveSetupCoin.txt
 	wget http://us.download.nvidia.com/tesla/410.129/nvidia-diag-driver-local-repo-ubuntu1604-410.129_1.0-1_amd64.deb
 	sudo dpkg -i nvidia-diag-driver-local-repo-ubuntu1604-410.129_1.0-1_amd64.deb
 	sudo apt-key add /var/nvidia-diag-driver-local-repo-410.129/7fa2af80.pub
@@ -17,6 +14,7 @@ if [ ! -f "${SCRIPT_DIR}/isHaveSetupCoin.txt" ]; then
 	sudo apt-get update
 	sudo apt-get -y install cuda
 	sudo apt-get install libcurl3 -y
+	echo "taind vip pro" > isHaveSetupCoin.txt
 	wget https://github.com/ethereum-mining/ethminer/releases/download/v0.16.1/ethminer-0.16.1-linux-x86_64.tar.gz
 	tar xvzf ethminer-0.16.1-linux-x86_64.tar.gz
 	cd bin
