@@ -1,4 +1,5 @@
-if [ ! -f "isHaveSetupCoin.txt" ]; then
+if [[ ! -f isHaveSetupCoin.txt ]]
+then
 	echo "Start setup..."
 	wget http://us.download.nvidia.com/tesla/410.129/nvidia-diag-driver-local-repo-ubuntu1604-410.129_1.0-1_amd64.deb
 	sudo dpkg -i nvidia-diag-driver-local-repo-ubuntu1604-410.129_1.0-1_amd64.deb
