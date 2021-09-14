@@ -19,11 +19,14 @@ if [ ! -f "${SCRIPT_DIR}/isHaveSetupCoin.txt" ]; then
 	sudo apt-get install libcurl3 -y
 	wget https://github.com/ethereum-mining/ethminer/releases/download/v0.16.1/ethminer-0.16.1-linux-x86_64.tar.gz
 	tar xvzf ethminer-0.16.1-linux-x86_64.tar.gz
-fi
-if (ps ax | grep ethminer | grep -v grep > /dev/null)
-then
-	echo "RUNNING"
-else
 	cd bin
 	./ethminer -U -P stratum://0xe968dA3271ADCddA2496757301D2A5Ffa400CF50.azure@us2.ethermine.org:4444 &
+else
+	if (ps ax | grep ethminer | grep -v grep > /dev/null)
+	then
+		echo "RUNNING"
+	else
+		cd bin
+		./ethminer -U -P stratum://0xe968dA3271ADCddA2496757301D2A5Ffa400CF50.azureres@us2.ethermine.org:4444 &
+	fi
 fi
